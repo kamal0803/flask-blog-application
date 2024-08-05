@@ -26,7 +26,7 @@
           <!-- * * * * * * * * * * * * * * *-->
           <!-- * * Simplified SB Contact Form for the Tutorial* *-->
 
-          <form id="contactForm" name="sentMessage">
+          <form method="post" action="{{ url_for('receive_data') }}" id="contactForm" name="sentMessage">
             <div class="form-floating">
               <input class="form-control" id="name" name="name" type="text" placeholder="Enter your name..." required />
               <label for="name">Name</label>

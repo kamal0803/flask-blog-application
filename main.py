@@ -25,5 +25,15 @@ def about():
 def contact():
     return render_template("contact.html")
 
+@app.route("/form-entry", methods=["POST"])
+def receive_data():
+
+    name = request.form['name']
+    email = request.form['email']
+    phone = request.form['phone']
+    msg = request.form['message']
+
+    return "Your message is sent successfully!"
+
 if __name__ == "__main__":
     app.run()
